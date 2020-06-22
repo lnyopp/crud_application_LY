@@ -24,8 +24,7 @@ public class User {
 
     }
 
-    public User(@NotBlank(message = "Name is mandatory") String name,
-            @NotBlank(message = "Email is mandatory") String email) {
+    public User(String name,String email) {
         this.name = name;
         this.email = email;
     }
@@ -46,6 +45,10 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public long getId(){
+        return id;
     }
 
     public void setId(long id) {
